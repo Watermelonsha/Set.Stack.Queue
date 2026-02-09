@@ -1,0 +1,23 @@
+import java.util.HashSet;
+
+public class Main {
+    public static void main(String[] args) {
+
+        HashSet<Integer> setX = new HashSet<>(); //создаём первый набор
+        setX.add(1); //заполняем числами
+        setX.add(2);
+        setX.add(3);
+        setX.add(4);
+
+        HashSet<Integer> setY = new HashSet<>(); //создаём второй набор
+        setY.add(3);
+        setY.add(4);
+        setY.add(5);
+
+        //оставляем в setX которые есть в setY
+        setX.retainAll(setY);
+
+        System.out.println("Общие элементы: " + setX);
+        //что совпало
+    }
+}
