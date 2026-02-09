@@ -1,0 +1,21 @@
+import java.util.HashSet;
+public class Main {
+    public static void main(String[] args) {
+
+        HashSet<Integer> set1 = new HashSet<>(); //создаём ферст набор чисел
+        set1.add(1); //числаа
+        set1.add(2);
+        set1.add(3);
+
+        HashSet<Integer> set2 = new HashSet<>(); //создаём второй
+        set2.add(3); //тут повтор чекнет хашсетк
+        set2.add(4);
+        set2.add(5);
+
+        //все из2 в 1
+        set1.addAll(set2);
+        //хашстубирает одинаковые
+
+        System.out.println("Результат: " + set1);
+    }
+}
