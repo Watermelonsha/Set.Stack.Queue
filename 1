@@ -1,0 +1,21 @@
+import java.util.*;//это все классф загружает чтобы каждый отдельно не писать
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Напиши значения друг мои(через пробел):");
+
+        String line = sc.nextLine();   // это просто сканер
+
+        String[] nums = line.split(" ");//тут мы пробелл просто добавляем
+//типа получается массик из строчек которрые уже сделанЫ
+        HashSet<Integer> unique = new HashSet<>();//ХАссшсет просто хранит числа.он похожте не сохранаяент
+
+        for (String n : nums) {//это форИЧ каждое число обозначает так скажжем
+            unique.add(Integer.parseInt(n));//нун мы строчки в цифры превращю потому что хащсэтт не хранит стринг
+        }
+
+        System.out.println("Самые уникальные..: " + unique);//
+    }
+}
