@@ -1,0 +1,25 @@
+//я расписываю комментарии что запоминать чтр для чего
+import java.util.HashSet;
+public class Main {
+
+    static HashSet<String> allowedUsers = new HashSet<>(); //тут хашсет хранит неодтиинак а стриг эьто строки не цифрпы типа
+
+    public static boolean isAllowed(String name) {//тут она смотрит на имя ну типа нету ли неправильного
+        return allowedUsers.contains(name);//тут он смотрит естьли внутри хащсээта
+
+        /*if (allowedUsers.contains(name))    МЫ БЫ  моргли и иф элс использоватьЮ но там все же короче
+    return true;
+else
+    return false;*/
+
+    }
+    //
+    public static void main(String[] args) {// тут именадобавляем просто
+        allowedUsers.add("Гоша");
+        allowedUsers.add("Вова");
+        allowedUsers.add("Адидас");
+
+        System.out.println(isAllowed("Гоша"));     // true
+        System.out.println(isAllowed("Шнейне"));   // false
+    }
+}
