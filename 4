@@ -1,0 +1,22 @@
+import java.util.HashSet; //подкл хашсээт штука для хранения уникальных значений
+
+public class Main {
+    public static void main(String[] args) {
+
+        HashSet<String> names = new HashSet<>(); //создаём хашсет для имён (дубликаты он не любит)
+
+        names.add("Гоша");   //добавляем имя
+        names.add("Жора");   //ещё одно имя
+        names.add("Мура");   //ещо одно имя
+        names.add("Стефан");//и ещоо одно имя
+        names.add("Айбек");//ещоо одно имя
+
+        //пытаемся удалитт конкретное имя
+        boolean removed = names.remove("Мура");
+        //тру еслиудалилось,аесли нет то фолсс
+
+        System.out.println("Удалилось ли?? " + removed);
+        System.out.println("Вообщем:  " + names);
+
+    }
+}
