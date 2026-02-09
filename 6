@@ -1,0 +1,24 @@
+import java.util.HashSet; 
+
+public class Main {
+    public static void main(String[] args) {
+
+        HashSet<Integer> setA = new HashSet<>(); //создаём 1 набор
+        setA.add(1); //первый
+        setA.add(2);//второй
+        setA.add(3);//треттий
+        setA.add(4);//четвертьый
+        setA.add(5);//пятница
+
+        HashSet<Integer> setB = new HashSet<>(); //создаём второй набор
+        setB.add(3);//тут уже не по порядку
+        setB.add(4);
+        setB.add(6);
+
+        //удаляем из 1 набора всечто совпадает с 2
+        setA.removeAll(setB);
+        //ну похожи удаляем получаеся
+
+        System.out.println("измененный setA: " + setA);
+    }
+}
