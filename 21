@@ -1,0 +1,49 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class Main {
+
+    //клан скан не скам
+    static class TaskScheduler {
+        private Deque<String> tasks = new ArrayDeque<>();
+
+        //эддинг тасксс
+        public void addTask(String task, boolean highPriority) {
+            if (highPriority) {
+                tasks.offerFirst(task); //випы
+            } else {
+                tasks.offerLast(task);  //простолюдины
+            }
+        }
+
+        //обработинг
+        public void processTask() {
+            if (tasks.isEmpty()) {
+                System.out.println("мне нечего делать брат");
+            } else {
+                String task = tasks.pollFirst(); // берём с начала
+                System.out.println("Обрабатываем задачу: " + task);
+            }
+        }
+
+        //чекаем нету ли
+        public boolean hasTasks() {
+            return !tasks.isEmpty();
+        }
+    }
+
+    //мэйн
+    public static void main(String[] args) {
+        TaskScheduler scheduler = new TaskScheduler();
+
+        scheduler.addTask("Задача 1", false); // простолюдины
+        scheduler.addTask("Задача 2", true);  // высокий вип
+        scheduler.addTask("Задача 3", false); // простолюдины
+        scheduler.addTask("Задача 4", true);  //вип н ысокй
+
+        System.out.println("        Обработка задач:");
+        while (scheduler.hasTasks()) {
+            scheduler.processTask();
+        }
+    }
+}
