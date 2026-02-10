@@ -1,0 +1,28 @@
+import java.util.Deque;
+import java.util.LinkedList;
+public class Main {
+    public static void main(String[] args) {
+        Deque<String> deque = new LinkedList<>();
+
+        System.out.println("У нас есть:");
+        System.out.println("Размер: " + deque.size() + ", пусто: " + deque.isEmpty());
+
+        deque.offerLast("a");
+        System.out.println("добавили а:");
+        System.out.println("Размер:" + deque.size() + "пусто:" + deque.isEmpty());
+
+        deque.offerLast("b");
+        System.out.println("Добавили б:");
+        System.out.println("Размер:" + deque.size() + "пусто:" + deque.isEmpty());
+
+        //удалейтинг с начала
+        deque.pollFirst();
+        System.out.println("удалили первый");
+        System.out.println("Размер:" + deque.size() + "пусто:" + deque.isEmpty());
+
+        //удалейтинг с концв
+        deque.pollLast();
+        System.out.println("удалили последнии :");
+        System.out.println("Размер:" + deque.size() + "пусто:" + deque.isEmpty());
+    }
+}
