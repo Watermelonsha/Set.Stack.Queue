@@ -1,0 +1,26 @@
+import java.util.ArrayDeque;
+import java.util.Queue;
+
+public class Main {
+    public static void main(String[] args) {
+        //создаём очередь эррейдекю
+        Queue<Integer> queue = new ArrayDeque<>();
+
+        //добавляем элементы в очередь тут все в ккнец идет
+        queue.offer(10); //тут 10
+        queue.offer(20); // а тутт20
+        queue.offer(30); //а тута 30
+
+        System.out.println("Очередь после добавления: " + queue);
+
+        //пр первый без удаления
+        System.out.println("Первый: " + queue.peek());
+
+        // Извлечение элементов из очереди до её опустошения
+        while (!queue.isEmpty()) {
+            System.out.println("Уалено: " + queue.poll());
+        }
+
+        System.out.println("Очередь после удаления: " + queue);
+    }
+}
