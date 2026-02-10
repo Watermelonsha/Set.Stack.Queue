@@ -1,0 +1,28 @@
+import java.util.Deque;
+import java.util.LinkedList;
+
+public class Main {
+    public static void main(String[] args) {
+        //едлаем двойную супермега очередь в поликлинику
+        Deque<Integer> deque = new LinkedList<>();
+
+        //в начало конец и вывдим буллен тп
+        boolean result1 = deque.offerFirst(10);
+        System.out.println("(10) вернул: " + result1);
+
+        boolean result2 = deque.offerFirst(20);
+        System.out.println("20) вернул: " + result2);
+
+        boolean result3 = deque.offerLast(30);
+        System.out.println("(30) вернул: " + result3);
+
+        boolean result4 = deque.offerLast(40);
+        System.out.println("40) вернул: " + result4);
+
+        //то чт в декью
+        System.out.println("  deque:");
+        for (Integer num : deque) {
+            System.out.println(num);
+        }
+    }
+}
