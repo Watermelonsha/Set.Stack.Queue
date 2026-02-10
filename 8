@@ -1,0 +1,28 @@
+import java.util.HashSet;
+import java.util.Set;
+
+public class Main {
+    public static void main(String[] args) {
+
+        //тут сетт 1
+        Set<Integer> setA = new HashSet<>();
+        setA.add(1);
+        setA.add(2);
+        setA.add(3);
+        setA.add(4);
+
+        //сделали сэтт2
+        Set<Integer> setB = new HashSet<>();
+        setB.add(2);
+        setB.add(3);
+
+        //чеет есть ли все зз setA все из setB
+        if (setA.containsAll(setB)) {
+            //тут есливсе раивльно и т д
+            System.out.println("setA содержит все элементы setB.");
+        } else {
+            //ну ту если ккх лтбо элеентов нету он пишет вот эьоо
+            System.out.println("setA НЕ содержит все элементы setB.");
+        }
+    }
+}
