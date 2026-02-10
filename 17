@@ -1,0 +1,22 @@
+import java.util.Deque;
+import java.util.LinkedList;
+public class Main {
+    public static void main(String[] args) {
+        Deque<String> deque = new LinkedList<>();
+        deque.offerLast("a");
+        deque.offerLast("b");//ту с повтрами зня
+        deque.offerLast("c");
+        deque.offerLast("b");
+        deque.offerLast("a");
+
+        System.out.println("Firstt: " + deque);
+
+        //удаляем с б
+        deque.removeFirstOccurrence("b");
+        System.out.println("removeFirstOccurrence: " + deque);
+
+        //а ту  с а как в прошлм
+        deque.removeLastOccurrence("a");
+        System.out.println("removeLastOccurrence: " + deque);
+    }
+}
