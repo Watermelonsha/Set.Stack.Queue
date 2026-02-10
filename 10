@@ -1,0 +1,21 @@
+import java.util.HashSet;
+import java.util.Set;
+
+public class Main {
+    public static void main(String[] args) {
+        //массив которы хотим проверить
+        String[] words = {"Apple", "apple", "Banana", "BANANA", "orange"};
+        Set<String> uniqueWords = new HashSet<>();
+
+        for (String word : words) { //изза форичцикла все разыветс word
+            uniqueWords.add(word.toLowerCase());
+            //тобы Apple и apple считались одинаклвыми
+            // хашсет убирает похожие
+        }
+
+        System.out.println("самые уникальн слова: " + uniqueWords);
+
+        System.out.println("Количество слов: " + uniqueWords.size());
+        //сайз возвращает количество
+    }
+}
