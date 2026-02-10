@@ -1,0 +1,29 @@
+import java.util.Deque;
+import java.util.LinkedList;
+public class Main {
+    public static void main(String[] args) {
+        String input = "racecar"; //мж
+        System.out.println("Проверяем : " + input);
+
+        Deque<Character> deque = new LinkedList<>();
+        for (char c : input.toCharArray()) {
+            deque.offerLast(c);
+        }
+
+        boolean isPalindrome = true;
+
+        //чекаем начало и онец
+        while (deque.size() > 1) {
+            if (!deque.pollFirst().equals(deque.pollLast())) {
+                isPalindrome = false;
+                break;
+            }
+        }
+
+        if (isPalindrome) {
+            System.out.println("это палиндроммм!");
+        } else {
+            System.out.println("НЕ палиндромммм!");
+        }
+    }
+}
