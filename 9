@@ -1,0 +1,25 @@
+import java.util.HashSet;
+import java.util.Set;
+public class Main {
+    public static void main(String[] args) {
+
+        //наше предложение
+        String sentence = "I love Watermelon and Watermelon is water water and red wat wat";
+
+        //разбиваем по пробелам
+        String[] words = sentence.split(" ");
+
+        //хашсэт дулкат удоаит
+        Set<String> uniqueWords = new HashSet<>();
+
+        // Добавляем слова сбда
+        for (String word : words) {
+            uniqueWords.add(word);
+        }
+
+        System.out.println("Уникальные слова:");
+        for (String word : uniqueWords) {
+            System.out.println(word);
+        }
+    }
+}
