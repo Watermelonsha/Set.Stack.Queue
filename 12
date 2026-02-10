@@ -1,0 +1,18 @@
+import java.util.Stack;
+public class StackExample {
+    public static void main(String[] args) {
+        //строки
+        Stack<String> stack = new Stack<>();
+
+        // Добавляем пуш с 3 варианттмиб
+        stack.push("Первый");
+        stack.push("Второй");
+        stack.push("Третий");
+
+        //убираем поп и печатаеь пока не танет псто
+        while (!stack.isEmpty()) {
+            String item = stack.pop();
+            System.out.println(item);
+        }
+    }
+}
