@@ -1,0 +1,28 @@
+import java.util.LinkedList;
+import java.util.Iterator;
+public class Main {
+    public static void main(String[] args) {
+        LinkedList<Integer> numbers = new LinkedList<>();
+
+        //в начало
+        numbers.addFirst(10);  //утт 10
+        numbers.addFirst(20);  //а тут 20 10
+
+        //в конец списка
+        numbers.addLast(30);   //туту 20 10 30
+        numbers.addLast(40);   //тута20 10 30 40
+
+        System.out.println("Список:");
+        Iterator<Integer> iterator = numbers.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
+        //чз форич
+        System.out.println("Через форич:");
+        for (Integer num : numbers) {
+            System.out.println(num);
+        }
+    }
+}
+
