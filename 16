@@ -1,0 +1,31 @@
+import java.util.Deque;
+import java.util.LinkedList;
+
+public class Main {
+    public static void main(String[] args) {
+        Deque<Integer> deque = new LinkedList<>();
+
+        deque.offerLast(10);
+        deque.offerLast(20);
+        deque.offerLast(30);
+
+        System.out.println("Initial deque: " + deque);
+
+        //gjk c yfxfkf elfk
+        System.out.println(",poll:");
+        while (!deque.isEmpty()) {
+            System.out.println(deque.poll()); //удал перв
+        }
+
+        //кбю сновв
+        deque.offerLast(100);
+        deque.offerLast(200);
+        deque.offerLast(300);
+
+        //поласт с конца
+        System.out.println("pollLast:");
+        while (!deque.isEmpty()) {
+            System.out.println(deque.pollLast()); //сам последн удалятммм
+        }
+    }
+}
